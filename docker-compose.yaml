@@ -1,0 +1,7 @@
+services:
+  app:
+    command: nvidia-smi
+    container_name: app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
