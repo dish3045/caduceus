@@ -13,7 +13,7 @@ def main():
     print("Tokenizing DNA sequence...")
     inputs = tokenizer(dna_sequence, return_tensors="pt", padding=True, truncation=True)
     # Mo
-    inputs = {k: v.to(device) for k, v in inputs.items()}
+    inputs = {k: v for k, v in inputs.items()}
     
     print("Getting model output...")
     with torch.no_grad():
